@@ -12,17 +12,18 @@ for filestr in filenames:
 
 	lines = []
 	c = 0 
-	for word in instr.split(' '):
+	for word in instr.split():
 
-		if 'art' in word:
-			print(word)
-			print('art'+str(c))
-			print()
+		if 'art' in word and word.startswith('\"art'):
+#			print(word)
+#			print('art'+str(c))
+#			print()
 			if ('art'+str(c)) not in word:
 				lines.append(c)
+				c += 1
 
 			c += 1
 
 
-	#print('Missing lines are:' + str(lines))
+	print('Missing lines are:' + str(lines))
 
