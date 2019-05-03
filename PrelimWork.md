@@ -51,5 +51,7 @@ Rule based mechanism:
 1. Identify 'Positive' and 'Negative' tokens
 2. Identify negators 'na' and invert sentiment accordingly  
 
+Based on these rules, classify texts as positive, negative, neutral. Using only obvious keywords, cannot incorporate more complex features like **metaphor**, or **chaining of keywords to display intent**, or anything of the sort.
+
 
 
