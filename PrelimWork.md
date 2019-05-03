@@ -32,7 +32,24 @@
 1. [Book data](~/Documents/Acads/Projects/CL2-Project/datasets/books/)
 2. [IndicNLP - Newspaper articles](~/Documents/Acads/Projects/CL2-Project/datasets/news-indicnlp/)
 
+## What I've done so far
 
+### Dataset
+
+Bengali News dataset: from leading newspapers
+
+### Preprocessing
+
+- Tokenized
+
+### Sentiment Classification
+
+#### Current Idea
+
+Rule based mechanism:
+
+1. Identify 'Positive' and 'Negative' tokens
+2. Identify negators 'na' and invert sentiment accordingly  
 
 
 
