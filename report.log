@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.10.13)  3 MAY 2019 19:05
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.10.13)  4 MAY 2019 02:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,32 +686,27 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 49.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \vbox (badness 1215) has occurred while \output is active []
-
- [1
+) [1
 
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \hbox (badness 1210) in paragraph at lines 147--173
+Underfull \hbox (badness 1210) in paragraph at lines 186--212
 \EU1/lmr/m/n/10.95 module sends a request to an API pro- 
  []
 
-[3]
-Overfull \hbox (0.51857pt too wide) in paragraph at lines 236--236
+[3] [4]
+Overfull \hbox (0.51857pt too wide) in paragraph at lines 275--275
 []  
  []
 
-[4] [5
-
-] (./report.aux) ) 
+[5] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  15551 strings out of 493638
  296172 string characters out of 6146795
- 310515 words of memory out of 5000000
+ 315519 words of memory out of 5000000
  18849 multiletter control sequences out of 15000+600000
  9953 words of font info for 53 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191

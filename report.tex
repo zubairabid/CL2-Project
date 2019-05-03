@@ -20,7 +20,7 @@
 \definecolor{diff}{rgb}{0.1,0.1,0.5}
 \definecolor{rlit}{rgb}{1,0,0}
 
-\title{Polarity Classification of Bengali News Articles}
+\title{Subjectivity Classification of Bengali News Articles}
 \author{Zubair Abid, 20171076}
 \date{}
 
@@ -49,18 +49,57 @@
 	]
 	
 	\section{Introduction}
-		English text uses abbreviations very frequently, to shorten complicated and/or oft-repeated terms, and 
-		to aid readability. Acronyms are a special case of abbreviations, usually formed from the initial 
-		characters of important terms of a word or a phrase.\\
+		A constantly increasing amount of digitally	available textual information online has 
+		opened up multiple opportunities for mining and analysing these texts for a multitude
+		of commercial, governmental, and social applications. \textbf{Sentiment Analysis} or,
+		as it is often referred to, \textbf{Opinion Mining} is an integral part of this process.
+		By sorting out the target sentiment of a given text, we can minimise a lot of 
+		potentially wasted time	when attempting analyses at deeper levels. Work in Sentiment
+		Analysis is typically carried out as a \textit{classification problem} at two levels:
 		
-		In this report, we shall refer to both initialisms 
-		(like CIA) and acronyms (such as NASA) as acronyms, in line with other research in this topic. Although 
-		some literature has made the distinction (Harley, 2004), they are not concerned with disambiguation in
-		particular, or even Computational Linguistics in general. Another assumption we make in the project is
-		that all acronyms must be a \textit{capitalized} sequence of characters, discarding cases like "laser"
-		(written in lowercase) which, although started put as an acronym and still finding common reference as 
-		such, has been adopted and is used as a word (often with no knowledge of its roots in acronym.\\		
-				
+		\begin{enumerate}
+			\item \textbf{Subjectivity classification: } Classifying a text as subjective
+			or objective
+			
+			\item \textbf{Polarity Classification: } Classifying a text as having positive,
+			neutral, or negative opinion\\
+			
+		\end{enumerate}
+	
+		$ $\\
+		Unfortunately, while a lot of work in the field has been done in English, efforts in 
+		vernacular languages like Bengali are sorely lacking. Work that does exist is plagued
+		by issues of much lower accuracies than their counterparts in English. From an extensive 
+		review of related work in the field, we concluded that the primary bottleneck is the lack
+		of high-volume publicly available quality annotated data. While rule-based methods were
+		not doing too well because of the rise of inconsistencies that came with the increasing
+		number of rules to account for both better precision and recall, supervised and unsupervised
+		learning methods were not doing too well either - due to the aforementioned lack of 
+		quality data publicly available in notable quantities.\\
+		$ $\\
+		In this project, we create a system to try and automatically annotate for sentiment analysis high 
+		quantities of Bengali data. We decided to focus on Subjectivity Classification, as it is 
+		a more pertinent question when considering newspaper data, as a bulk of newspaper data would
+		be objective, and thus less likely to express polar opinions on content.
+		Using a method found in \textit{THAT PAPER}, we use a combination of
+		\begin{enumerate}
+			\item A high precision, low recall rule-based classifier to create and initial
+			'seed' data to be used as the intial training set for further automated annotation
+
+			\item Extraction Pattern Learning to recognise patterns associated with subjective and
+			objective texts
+
+			\item A Naive Bayes Classifier
+			
+			\item Self training the sentence classifier 			
+		\end{enumerate}
+
+		\textit{I have two options for the project. Either present just (1) as the contribution to
+		be used by future researchers to implement (2) and beyond, or I can actually implement
+		(2) and beyond. I'm trying to do the full implementation, but there's no guarantee that I'll
+		succeed. In case I don't remove the other parts and add it to future work, and "why I'm doing
+		this at all"}		
+		
 		Acronym disambiguation is not as simple as storing a dictionary of possible expansions and getting output
 		on a given input of acronyms. Ammar et al (2011) \cite{nine}  mentioned that for english Wikipedia, articles contain 
 		an average of 9.7 abbreviations per article, and more than 63\% of the articles contain at least one  
