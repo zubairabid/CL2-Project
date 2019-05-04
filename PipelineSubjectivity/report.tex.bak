@@ -20,7 +20,7 @@
 \definecolor{diff}{rgb}{0.1,0.1,0.5}
 \definecolor{rlit}{rgb}{1,0,0}
 
-\title{Polarity Classification of Bengali News Articles}
+\title{Subjectivity Classification of Bengali News Articles}
 \author{Zubair Abid, 20171076}
 \date{}
 
@@ -78,12 +78,20 @@
 		quality data publicly available in notable quantities.\\
 		$ $\\
 		In this project, we create a system to try and automatically annotate for sentiment analysis high 
-		quantities of Bengali data. We decided
+		quantities of Bengali data. We decided to focus on Subjectivity Classification, as it is 
+		a more pertinent question when considering newspaper data, as a bulk of newspaper data would
+		be objective, and thus less likely to express polar opinions on content.
 		Using a method found in \textit{THAT PAPER}, we use a combination of
 		\begin{enumerate}
 			\item A high precision, low recall rule-based classifier to create and initial
 			'seed' data to be used as the intial training set for further automated annotation
-			\item Extraction Pattern Learning to recognise patterns associated with sujective s
+
+			\item Extraction Pattern Learning to recognise patterns associated with subjective and
+			objective texts
+
+			\item A Naive Bayes Classifier
+			
+			\item Self training the sentence classifier 			
 		\end{enumerate}
 
 		\textit{I have two options for the project. Either present just (1) as the contribution to
@@ -92,22 +100,6 @@
 		succeed. In case I don't remove the other parts and add it to future work, and "why I'm doing
 		this at all"}		
 		
-		For this project, I decided to focus on getting high precision
-		
-		
-	
-		English text uses abbreviations very frequently, to shorten complicated and/or oft-repeated terms, and 
-		to aid readability. Acronyms are a special case of abbreviations, usually formed from the initial 
-		characters of important terms of a word or a phrase.\\
-		
-		In this report, we shall refer to both initialisms 
-		(like CIA) and acronyms (such as NASA) as acronyms, in line with other research in this topic. Although 
-		some literature has made the distinction (Harley, 2004), they are not concerned with disambiguation in
-		particular, or even Computational Linguistics in general. Another assumption we make in the project is
-		that all acronyms must be a \textit{capitalized} sequence of characters, discarding cases like "laser"
-		(written in lowercase) which, although started put as an acronym and still finding common reference as 
-		such, has been adopted and is used as a word (often with no knowledge of its roots in acronym.\\		
-				
 		Acronym disambiguation is not as simple as storing a dictionary of possible expansions and getting output
 		on a given input of acronyms. Ammar et al (2011) \cite{nine}  mentioned that for english Wikipedia, articles contain 
 		an average of 9.7 abbreviations per article, and more than 63\% of the articles contain at least one  

@@ -53,5 +53,10 @@ Rule based mechanism:
 
 Based on these rules, classify texts as positive, negative, neutral. Using only obvious keywords, cannot incorporate more complex features like **metaphor**, or **chaining of keywords to display intent**, or anything of the sort.
 
+Eg: 
 
+### Subjectivity Classification
+#### Current Idea
+
+For bengali sentiwordnet: use english sentiwordnet and translate to bengali
 
