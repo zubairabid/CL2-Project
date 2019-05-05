@@ -39,3 +39,65 @@
 
 1. Bengali SentiWordNet
 2. Bengali-English word-level Translator
+
+
+
+
+
+
+
+
+
+## Off the bat
+
+1. Use sentence level at sentiwordnet
+2. If odd number of negations (fix this maybe?) then invert the positive/negative score of the sentence. OR. Look if negation is next to a content word
+3. First sentences more important than later (pyramid - use a parabolic curve to grade). Take a weighted average of sentence contributions.
+4. Titles do not help much
+
+
+
+```python
+sentences = body.split('|')
+n = len(sentences)
+
+i = 0.1
+
+docscore = [0, 0, 0]
+for sentence in sentences:
+    
+    # senscore keeps track of positive, negative, and objective
+    senscore = [0, 0, 0]
+    
+    j = 0
+    neg = 0
+    
+    for word in sentence:
+        if word in stopword:
+            continue
+        j += 1
+        senscore[0] += swn[word].pos_score()
+        senscore[1] += swn[word].neg_score()
+        senscore[2] += swn[word].obj_score()
+    
+    	if word in negword:
+            neg += 1
+    
+    # Normalising the score
+    senscore[0] /= j
+    senscore[1] /= j
+    senscore[2] /= j
+    
+    # Negation application
+    if neg % 2 != 0:
+        senscore[0], senscore[1] = senscore[1], senscore[0]
+      
+	# docscore  = weighted average of senscore
+    docscore[0] = senscore[0] * e ^ (-i)
+    
+    i += 0.1
+   
+```
+
+
+
