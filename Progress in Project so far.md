@@ -53,7 +53,8 @@
 1. Use sentence level at sentiwordnet
 2. If odd number of negations (fix this maybe?) then invert the positive/negative score of the sentence. OR. Look if negation is next to a content word
 3. First sentences more important than later (pyramid - use a parabolic curve to grade). Take a weighted average of sentence contributions.
-4. Titles do not help much
+4. Titles **do help**
+5. The swn itself is wrong on occasion. Eg: 'arrested'
 
 
 
@@ -61,7 +62,9 @@
 sentences = body.split('|')
 n = len(sentences)
 
-i = 0.1
+i = 0
+
+base = (1/6) * n * (n+1) * (2*n + 1) 
 
 docscore = [0, 0, 0]
 for sentence in sentences:
@@ -95,7 +98,9 @@ for sentence in sentences:
 	# docscore  = weighted average of senscore
     docscore[0] = senscore[0] * e ^ (-i)
     
-    i += 0.1
+    (n - i)**2
+    
+    i += 1
    
 ```
 
