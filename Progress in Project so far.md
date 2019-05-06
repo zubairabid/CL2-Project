@@ -106,3 +106,13 @@ for sentence in sentences:
 
 
 
+তুলোধনা not in dictionary
+
+SentiWordNet fuckups:
+
+1. coalition is neutral
+2. split is only negative in 1 sense
+3. arrest(ed) is neutral
+4. 
+
+
